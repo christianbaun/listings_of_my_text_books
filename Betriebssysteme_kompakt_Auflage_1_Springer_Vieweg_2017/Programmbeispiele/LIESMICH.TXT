@@ -1,0 +1,14 @@
+In diesem Ordner finden Sie die Programmbeispiele zur ersten Auflage von
+"Betriebssysteme kompakt" (ISBN 978-3-662-53142-6), das im April 2017 bei 
+Springer Vieweg erschienen ist.
+
+Die Programmbeispiele aus Kapitel 9 wurden im Vergleich zum Buch an einigen 
+Stellen um weitere Kommentare ergänzt.
+
+Das Erzeuger/Verbraucher-Beispiel (Listing 9.7) fehlt, da es im Buch nur in 
+Pseudocode realisiert ist.
+
+Bei Fragen, Kritik oder Verbesserungsvorschlägen, zögern Sie bitte nicht zu
+schreiben.
+
+Christian Baun  --- christianbaun@gmail.com  --- http://www.christianbaun.de
