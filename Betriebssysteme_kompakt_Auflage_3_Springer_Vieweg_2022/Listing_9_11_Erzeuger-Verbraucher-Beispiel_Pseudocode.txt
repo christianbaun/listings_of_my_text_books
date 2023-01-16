@@ -1,0 +1,28 @@
+typedef int semaphore;                     // Semaphoren sind von Typ Integer
+semaphore voll  = 0;                       // zählt die belegten Plätze im Puffer
+semaphore leer  = 8;                       // zählt die freien Plätze im Puffer
+semaphore mutex = 1;                       // steuert Zugriff auf kritische Bereiche
+
+void erzeuger (void) {
+    int daten;
+    while (TRUE) {                         // Endlosschleife
+        erzeugeDatenpaket(daten);          // erzeuge Datenpaket
+        P(leer);                           // Zähler "leere Plätze" erniedrigen
+        P(mutex);                          // in kritischen Bereich eintreten
+        einfuegenDatenpaket(daten);        // Datenpaket in den Puffer schreiben
+        V(mutex);                          // kritischen Bereich verlassen
+        V(voll);                           // Zähler für volle Plätze erhöhen
+    }
+}
+
+void verbraucher (void) {
+    int daten;
+    while (TRUE) {                         // Endlosschleife
+        P(voll);                           // Zähler "volle Plätze" erniedrigen
+        P(mutex);                          // in kritischen Bereich eintreten
+        entferneDatenpaket(daten);         // Datenpaket aus dem Puffer holen
+        V(mutex);                          // kritischen Bereich verlassen
+        V(leer);                           // Zähler für leere Plätze erhöhen
+        verbraucheDatenpaket(daten);       // Datenpaket nutzen
+    }
+}

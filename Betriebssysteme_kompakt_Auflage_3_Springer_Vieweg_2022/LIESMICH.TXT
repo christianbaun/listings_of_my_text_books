@@ -1,0 +1,10 @@
+In diesem Ordner finden Sie die Programmbeispiele zur dritten Auflage von
+"Betriebssysteme kompakt", das in 2022 bei Springer Vieweg erscheint.
+
+Die Programmbeispiele aus Kapitel 9 wurden im Vergleich zum Buch an einigen 
+Stellen um weitere Kommentare ergänzt.
+
+Bei Fragen, Kritik oder Verbesserungsvorschlägen, zögern Sie bitte nicht zu
+schreiben.
+
+Christian Baun --- christianbaun@gmail.com --- http://www.christianbaun.de
