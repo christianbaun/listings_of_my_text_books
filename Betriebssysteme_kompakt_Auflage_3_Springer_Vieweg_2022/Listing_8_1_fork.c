@@ -15,7 +15,8 @@ void main() {
   if (rueckgabewert > 0) {
     // Rückgabewert von fork = positiv --> Elternprozess
     // Rückgabewert = PID des neuen Kindprozesses
-    printf("Hier ist der Elternprozess. Der Kindprozess hat die PID: %i\n", rueckgabewert);
+    printf("Hier ist der Elternprozess.\n");
+    printf("PID des Kindprozesses: %i\n", rueckgabewert);
   }
   
   if (rueckgabewert == 0) {
