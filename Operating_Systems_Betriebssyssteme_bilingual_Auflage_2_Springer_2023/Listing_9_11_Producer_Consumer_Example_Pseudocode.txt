@@ -1,0 +1,28 @@
+typedef int semaphore;               // semaphores are of type integer
+semaphore filled = 0;                // counts the occupied locations in the buffer
+semaphore empty  = 8;                // counts the empty locations in the buffer
+semaphore mutex  = 1;                // controls access to the critial sections
+
+void producer (void) {
+    int data;
+    while (TRUE) {                   // infinite loop
+        createDatapacket(data);      // create data packet
+        P(empty);                    // decrement the counter for empty positions 
+        P(mutex);                    // enter the critical section
+        insertDatapacket(data);      // insert a data packet into the buffer
+        V(mutex);                    // leave the critical section
+        V(filled);                   // increment the counter for occupied positions 
+    }
+}
+
+void consumer (void) {
+    int data;
+    while (TRUE) {                   // infinite loop
+        P(filled);                   // decrement the counter for occupied positions 
+        P(mutex);                    // enter the critical section
+        removeDatapacket(data);      // remove a data packet from the buffer
+        V(mutex);                    // leave the critical section
+        V(empty);                    // increment the counter for empty positions 
+        consumeDatapacket(data);     // consume a data packet
+    }
+}
