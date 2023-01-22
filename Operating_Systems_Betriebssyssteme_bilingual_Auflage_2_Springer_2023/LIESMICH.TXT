@@ -2,9 +2,6 @@ In diesem Ordner finden Sie die Programmbeispiele zur zweiten Auflage von
 "Operating Systems / Betriebssysteme: Bilingual Edition / Zweisprachige
 Ausgabe", das in 2023 bei Springer erscheint.
 
-Die Programmbeispiele aus Kapitel 9 wurden im Vergleich zum Buch an einigen 
-Stellen um weitere Kommentare ergänzt.
-
 Bei Fragen, Kritik oder Verbesserungsvorschlägen, zögern Sie bitte nicht zu
 schreiben.
 
